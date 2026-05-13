@@ -3,7 +3,7 @@ import { StandingsTable } from "@/components/standings/StandingsTable";
 
 export const dynamic = 'force-dynamic';
 
-export default async function StandingsPage({ searchParams }: { searchParams: { division?: string } }) {
+export default async function StandingsPage({ searchParams }: { searchParams: Promise<{ division?: string }> }) {
   const { division: initialDivision } = await searchParams;
   const { data: standings } = await supabase.from("team_standings").select("*");
   const { data: divisions } = await supabase.from("divisions").select("*").order("name");

@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 export const dynamic = 'force-dynamic';
 
-export default async function BoxScorePage({ params }: { params: { id: string } }) {
+export default async function BoxScorePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
 
   // Fetch Game Details
