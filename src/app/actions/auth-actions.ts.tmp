@@ -1,0 +1,2 @@
+"use client"; // Note: This will be moved to server actions folder but let's define the logic.
+// Wait, I'll put it in src/app/actions/auth-actions.ts
