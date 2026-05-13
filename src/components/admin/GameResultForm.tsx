@@ -16,7 +16,7 @@ const schema = z.object({
   home_score: z.number().min(0, "Score cannot be negative"),
   away_score: z.number().min(0, "Score cannot be negative"),
   game_date: z.string().min(1, "Please select a date"),
-  is_final: z.boolean().default(true),
+  is_final: z.boolean(),
 });
 
 type FormData = z.infer<typeof schema>;
